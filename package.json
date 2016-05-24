@@ -1,7 +1,7 @@
 {
   "name": "promiseproxy",
-  "version": "1.0.0",
-  "description": "asd",
+  "version": "1.0.1",
+  "description": "Recursively promisify callback-style APIs based on a simple scheme and Proxy objects",
   "main": "prome.js",
   "scripts": {
     "test": "tape test/*.js | colortape",

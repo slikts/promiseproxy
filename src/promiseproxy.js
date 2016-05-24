@@ -14,7 +14,7 @@ const {insert} = require('./util')
  * const schema = {chrome: {tabs: {query: 1, update: 2}}}
  * // Promisify the Chrome API based on the schema
  * const _chrome = PromiseProxy(chrome, schema)
- * // The promisified methods returns a Promise if the callback parameter is omitted
+ * // The promisified methods return a Promise if the callback parameter is omitted
  * _chrome.tabs.query(info).then(callback)
  * // The same methods can still be used with a callback
  * _chrome.tabs.query(info, callback)

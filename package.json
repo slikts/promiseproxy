@@ -1,0 +1,32 @@
+{
+  "name": "promiseproxy",
+  "version": "1.0.0",
+  "description": "asd",
+  "main": "prome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs src/*.js > README.md; echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/slikts/promiseproxy.git"
+  },
+  "keywords": [
+    "promise",
+    "promisify",
+    "callback",
+    "cps",
+    "deep",
+    "recursive",
+    "proxy"
+  ],
+  "author": "slikts <dabas@untu.ms>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slikts/promiseproxy/issues"
+  },
+  "homepage": "https://github.com/slikts/promiseproxy#readme",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^1.3.6"
+  }
+}

@@ -6,6 +6,7 @@ A yet another library for promisifying callback-style APIs, but this time implem
 ## Used in
 
 * [promiseproxy-chrome](https://github.com/slikts/promiseproxy-chrome)
+* [promiseproxy-node](https://github.com/slikts/promiseproxy-node)
 
 ## API
 **Example**  

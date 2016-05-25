@@ -5,7 +5,7 @@
   "main": "prome.js",
   "scripts": {
     "test": "tape test/*.js | colortape",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs src/*.js > README.md; echo"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs src/*.js > README.md"
   },
   "repository": {
     "type": "git",

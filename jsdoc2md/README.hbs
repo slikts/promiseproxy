@@ -3,15 +3,15 @@
 # PromiseProxy
 A yet another library for promisifying callback-style APIs, but this time implemented using the ES2015 [`Proxy`][1] object. It works by defining the API structure and creating a `Proxy` that intercepts method calls and returns a `Promise` if a callback parameter is omitted. The benefit of using a `Proxy` is that the API is extended without the need to duplicate it or monkey patch its methods. The `Proxy` is implemented in less than [20 lines](/), making this approach very lightweight and easy to audit.
 
+## Used in
+
+* [promiseproxy-chrome](https://github.com/slikts/promiseproxy-chrome)
+
 ## API
 {{#module name='promiseproxy'~}}
 {{>body~}}
 {{>member-index~}}
 {{>members~}}
 {{/module}}
-
-## TODO
-
- * Support for rejecting promises
 
 [1]:[https://goo.gl/ICTTFQ]

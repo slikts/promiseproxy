@@ -19,7 +19,7 @@ const {insert} = require('./util')
  * // The same methods can still be used with a callback
  * _chrome.tabs.query(info, callback)
  */
-function PromiseProxy(target, schema, factory = PromiseProxy) {
+function PromiseProxy(target, schema, self = PromiseProxy) {
   const handler = {
     apply(method, receiver, args) {
       const index = schema
@@ -31,7 +31,7 @@ function PromiseProxy(target, schema, factory = PromiseProxy) {
     get(target, key) {
       const prop = target[key]
       if (schema.hasOwnProperty(key)) {
-        return factory(prop, schema[key])
+        return self(prop, schema[key])
       }
       return prop
     },

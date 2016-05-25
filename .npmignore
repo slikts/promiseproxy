@@ -1,2 +1,4 @@
 /jsdoc2md
 .gitignore
+.eslintrc.json
+/test

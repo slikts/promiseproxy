@@ -1,12 +1,26 @@
 [![view on npm](http://img.shields.io/npm/v/promiseproxy.svg)](https://www.npmjs.org/package/promiseproxy)
 
 # PromiseProxy
-A yet another library for promisifying callback-style APIs, but this time implemented using the ES2015 [`Proxy`][1] object. It works by defining the API structure and creating a `Proxy` that intercepts method calls and returns a `Promise` if a callback parameter is omitted. The benefit of using a `Proxy` is that the API is extended without the need to duplicate it or monkey patch its methods. The `Proxy` is implemented in less than [20 lines](/), making this approach very lightweight and easy to audit.
+A yet another library for *promisifying* callback-style APIs, but this time implemented using the ES2015 [`Proxy`][1] object. It works by intercepting method calls to the API and returning a promise if a callback parameter was expected.
+
+The benefit of using proxies is that the API is extended without the need to duplicate or mutate the original API implementation. The main functionality of the proxies is implemented in less than [20 lines][8], making this approach lightweight and easily auditable.
 
 ## Used in
 
-* [promiseproxy-chrome](https://github.com/slikts/promiseproxy-chrome)
-* [promiseproxy-node](https://github.com/slikts/promiseproxy-node)
+* **[promiseproxy-chrome][3]** – Promisified [Chrome extension API][5]
+* **[promiseproxy-node][2]** – Promisified [Node.js 6.x API][4]
+
+## About `Proxy`
+
+ * [Exploring ES6 – Metaprogramming with proxies][7]
+ * [You Don't Know JS – Chapter 7: Meta Programming][6]
+
+## Requirements
+
+`Proxy` requires native ES2015 support since it's not practicable to shim it for ES5 environments. It is supported in Node.js 6+, Chrome, Firefox and Edge.
+
+ * [Browser support for `Proxy`](https://kangax.github.io/compat-table/es6/#test-Proxy)
+ * [Node.js support for `Proxy`](http://node.green/#Proxy)
 
 ## API
 **Example**  
@@ -39,3 +53,10 @@ _chrome.tabs.query(info, callback)
 ```
 
 [1]:[https://goo.gl/ICTTFQ]
+[2]:[https://github.com/slikts/promiseproxy-node]
+[3]:[https://github.com/slikts/promiseproxy-chrome]
+[4]:[https://nodejs.org/api/]
+[5]:[https://developer.chrome.com/extensions/api_index]
+[6]:[https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md#proxies]
+[7]:[http://exploringjs.com/es6/ch_proxies.html]
+[8]:[blob/master/src/promiseproxy.js#L22-L40]

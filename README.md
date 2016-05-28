@@ -59,4 +59,4 @@ _chrome.tabs.query(info, callback)
 [5]: https://developer.chrome.com/extensions/api_index
 [6]: https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md#proxies
 [7]: http://exploringjs.com/es6/ch_proxies.html
-[8]: blob/master/src/promiseproxy.js#L22-L40
+[8]: src/promiseproxy.js#L22-L40

@@ -52,11 +52,11 @@ _chrome.tabs.query(info).then(callback)
 _chrome.tabs.query(info, callback)
 ```
 
-[1]:[https://goo.gl/ICTTFQ]
-[2]:[https://github.com/slikts/promiseproxy-node]
-[3]:[https://github.com/slikts/promiseproxy-chrome]
-[4]:[https://nodejs.org/api/]
-[5]:[https://developer.chrome.com/extensions/api_index]
-[6]:[https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md#proxies]
-[7]:[http://exploringjs.com/es6/ch_proxies.html]
-[8]:[blob/master/src/promiseproxy.js#L22-L40]
+[1]: https://goo.gl/ICTTFQ
+[2]: https://github.com/slikts/promiseproxy-node
+[3]: https://github.com/slikts/promiseproxy-chrome
+[4]: https://nodejs.org/api/
+[5]: https://developer.chrome.com/extensions/api_index
+[6]: https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md#proxies
+[7]: http://exploringjs.com/es6/ch_proxies.html
+[8]: blob/master/src/promiseproxy.js#L22-L40

@@ -1,6 +1,6 @@
 {
   "name": "promiseproxy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Recursively promisify callback-style APIs based on a simple scheme and Proxy objects",
   "main": "prome.js",
   "scripts": {

@@ -1,4 +1,5 @@
-[![view on npm](http://img.shields.io/npm/v/promiseproxy.svg)](https://www.npmjs.org/package/promiseproxy)
+[![view on npm](http://img.shields.io/npm/v/promiseproxy.svg)][package-url]
+[![License][license-image]][license-url]
 
 # Lightweight promisified API wrappers
 A yet another library for *promisifying* callback-style APIs, but this time implemented using the ES2015 [`Proxy`][1] object. It works by intercepting method calls to the API and returning a promise if a callback parameter was expected.
@@ -43,7 +44,7 @@ Factory of [`Proxy`][1] objects for recursively promisifying a callback-based AP
 ```js
 // Define chrome.tabs.query(_, callback) and .update(_, _, callback) methods
 // 1 and 2 are the positions of the callback parameters (zero-based)
-const schema = {chrome: {tabs: {query: 1, update: 2}}}
+const schema = {tabs: {query: 1, update: 2}}
 // Promisify the Chrome API based on the schema
 const _chrome = PromiseProxy(chrome, schema)
 // The promisified methods return a Promise if the callback parameter is omitted
@@ -60,3 +61,7 @@ _chrome.tabs.query(info, callback)
 [6]: https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md#proxies
 [7]: http://exploringjs.com/es6/ch_proxies.html
 [8]: src/promiseproxy.js#L22-L40
+[package-url]: https://npmjs.com/package/promiseproxy
+[npm-badge-png]: https://nodei.co/npm/promiseproxy.png
+[license-url]: LICENSE
+[license-image]: http://img.shields.io/npm/l/promiseproxy.svg

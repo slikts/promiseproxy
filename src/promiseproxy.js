@@ -11,7 +11,7 @@ const {insert} = require('./util')
  * @example
  * // Define chrome.tabs.query(_, callback) and .update(_, _, callback) methods
  * // 1 and 2 are the positions of the callback parameters (zero-based)
- * const schema = {chrome: {tabs: {query: 1, update: 2}}}
+ * const schema = {tabs: {query: 1, update: 2}}
  * // Promisify the Chrome API based on the schema
  * const _chrome = PromiseProxy(chrome, schema)
  * // The promisified methods return a Promise if the callback parameter is omitted

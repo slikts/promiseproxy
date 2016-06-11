@@ -6,8 +6,8 @@ const {PromiseProxy} = require('../')
 test('instatiate: with new', function (t) {
   const schema = {
     tabs: {
-      query: 1
-    }
+      query: 1,
+    },
   }
 
   const n = 123
@@ -16,8 +16,8 @@ test('instatiate: with new', function (t) {
     tabs: {
       query: (_, callback) => {
         setTimeout(() => callback(n), 0)
-      }
-    }
+      },
+    },
   }
 
   const pchrome = PromiseProxy(_chrome, schema)

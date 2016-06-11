@@ -4,7 +4,7 @@
   "description": "Recursively promisify callback-style APIs based on a simple scheme and Proxy objects",
   "main": "prome.js",
   "scripts": {
-    "test": "tape test/*.js | colortape",
+    "test": "tape test/*.js",
     "docs": "jsdoc2md -t jsdoc2md/README.hbs src/*.js > README.md"
   },
   "repository": {
@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/slikts/promiseproxy#readme",
   "devDependencies": {
-    "colortape": "^0.1.1",
     "jsdoc-to-markdown": "^1.3.6",
     "tape": "^4.5.1"
   },

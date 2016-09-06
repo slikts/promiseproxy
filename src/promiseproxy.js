@@ -26,7 +26,12 @@ function PromiseProxy(target, schema, self = PromiseProxy) {
       if (args[index] != null) {
         return Reflect.apply(method, receiver, args)
       }
-      return new Promise(resolve => Reflect.apply(method, receiver, insert(args, resolve, index)))
+      return new Promise((resolve, reject) => {
+        let executor = (err, returnValue) => {
+          err == null ? resolve(returnValue) : reject(err)
+        }
+        Reflect.apply(method, receiver, insert(args, executor, index))
+      })
     },
     get(target, key) {
       const prop = target[key]

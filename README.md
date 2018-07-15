@@ -2,6 +2,9 @@
 [![License][license-image]][license-url]
 
 # Lightweight promisified API wrappers
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/slikts/promiseproxy.svg)](https://greenkeeper.io/)
+
 A yet another library for *promisifying* callback-style APIs, but this time implemented using the ES2015 [`Proxy`][1] object. It works by intercepting method calls to the API and returning a promise if a callback parameter was expected.
 
 The benefit of using proxies is that the API is extended without the need to duplicate or mutate the original API implementation. The main functionality of the proxies is implemented in less than [20 lines][8], making this approach lightweight and easily auditable.

@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/slikts/promiseproxy#readme",
   "devDependencies": {
-    "jsdoc-to-markdown": "^1.3.6",
+    "jsdoc-to-markdown": "^4.0.1",
     "tape": "^4.5.1"
   },
   "engines": {
